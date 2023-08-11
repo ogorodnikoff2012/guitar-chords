@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Guitar Chord picker</title>
+    <script src="main.js"></script>
+</head>
+<body style="display: flex">
+<div id="container">
+    <canvas id="canvas"></canvas>
+    <div id="menu">
+        <form action="" id="menu-form" method="POST">
+            <label for="string-count">String count:</label><input type="number" id="string-count" name="string-count"
+                                                                  min="1" max="12" value="6"/>
+            <br>
+            <label for="fret-count">Fret count:</label><input type="number" id="fret-count" name="fret-count" min="1"
+                                                              max="12" value="6"/>
+            <fieldset id="finger-selector">
+                <legend>Current finger:</legend>
+                <div>
+                    <label for="finger0">Finger 1</label><input type="radio" name="finger" value="0" id="finger0"
+                                                                checked><br>
+                    <label for="finger1">Finger 2</label><input type="radio" name="finger" value="1" id="finger1"><br>
+                    <label for="finger2">Finger 3</label><input type="radio" name="finger" value="2" id="finger2"><br>
+                    <label for="finger3">Finger 4</label><input type="radio" name="finger" value="3" id="finger3"><br>
+                </div>
+                <div>
+                    <button id="reset-finger" type="button">Reset current finger</button>
+                    <br>
+                    <button id="reset-all" type="button">Reset all</button>
+                </div>
+            </fieldset>
+            <label for="chord-name">Chord name:</label><input type="text" name="chord-name" id="chord-name">
+            <br>
+            <button id="save-png" type="button">Save as PNG</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
